@@ -1,14 +1,17 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #100d18;
   line-height: 1.5;
-  color: #333333;
+  color: white;
   text-align: center;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px;
+  background-color: #1c1824;
+  margin: 50px auto;
   border: 1px solid black;
+  border-radius: 12px;
   padding: 20px;
 }
 
@@ -45,4 +48,23 @@ img {
 
 p {
   font-size: 16px;
+  margin: 30px auto;
+}
+
+button {
+  background-color: #7d56dd;
+  color: white;
+  font-size: 18px;
+  margin: 15px auto;
+  padding: 15px 25px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+a {
+  color: white;
+}
+
+footer {
+  margin: 20px;
 }
