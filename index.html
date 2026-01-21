@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+      <button>CHANGE THEME</button>
       <h1>CAR RALLY</h1>
       <h2>What is rallying?</h2>
       <img
@@ -38,14 +39,32 @@
         short in the form of trials at a single venue, or several thousand miles
         long in an extreme endurance rally.
       </p>
-      <button>
-        <a
-          href="https://en.wikipedia.org/wiki/Rallying"
-          target="_blank"
-          class="more-info"
-          >Click here for more</a
-        >
-      </button>
+      <div class="buttons">
+        <button>
+          <a
+            href="https://en.wikipedia.org/wiki/Rallying"
+            target="_blank"
+            class="more-info"
+            >Find out more</a
+          >
+        </button>
+        <button id="send-more" class="more-info">Send me more</button>
+      </div>
+      <script>
+        function send() {
+          let question = prompt("Have you heard about rallying before?");
+          let name = prompt("What is your first name?");
+          let email = prompt("What is your email?");
+
+          alert(
+            "Thanks " +
+              name +
+              "! We'll be in touch soon with more details. Feel free to contact us if you have any questions hello@shecodes.io"
+          );
+        }
+        let button = document.querySelector("#send-more");
+        button.addEventListener("click", send);
+      </script>
       <footer>
         Coded by
         <a href="https://github.com/anachicaiza" target="_blank"
