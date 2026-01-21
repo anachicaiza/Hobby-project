@@ -7,8 +7,8 @@
     <title>Hobby</title>
   </head>
   <body>
+    <button id="change-theme" class="change-theme">CHANGE THEME</button>
     <div class="container">
-      <button>CHANGE THEME</button>
       <h1>CAR RALLY</h1>
       <h2>What is rallying?</h2>
       <img
@@ -50,6 +50,13 @@
         </button>
         <button id="send-more" class="more-info">Send me more</button>
       </div>
+      <footer>
+        Coded by
+        <a href="https://github.com/anachicaiza" target="_blank"
+          >Ana Chicaiza</a
+        >
+        with HTML, CSS and JS
+      </footer>
       <script>
         function send() {
           let question = prompt("Have you heard about rallying before?");
@@ -62,16 +69,24 @@
               "! We'll be in touch soon with more details. Feel free to contact us if you have any questions hello@shecodes.io"
           );
         }
+
+        function toggleTheme() {
+          if (theme === "light") {
+            theme = "dark";
+            document.querySelector("body").classList.add("dark");
+          } else {
+            theme = "light";
+            document.querySelector("body").classList.remove("dark");
+          }
+        }
+
         let button = document.querySelector("#send-more");
         button.addEventListener("click", send);
+
+        let theme = "dark";
+        let themeButton = document.querySelector("#change-theme");
+        themeButton.addEventListener("click", toggleTheme);
       </script>
-      <footer>
-        Coded by
-        <a href="https://github.com/anachicaiza" target="_blank"
-          >Ana Chicaiza</a
-        >
-        with HTML, CSS and JS
-      </footer>
     </div>
   </body>
 </html>
